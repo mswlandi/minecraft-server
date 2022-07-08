@@ -4,11 +4,6 @@
     Upload folder to Google Drive
 """
 
-# Enable Python3 compatibility
-from __future__ import (unicode_literals, absolute_import, print_function,
-                        division)
-from turtle import back
-
 # Import Google libraries
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
@@ -150,7 +145,7 @@ def get_file_list(drive, folder_id):
 
 def main():
     world_name = "Bedrock level"
-    src_folder_name = f"~/server/worlds/{world_name}"
+    src_folder_name = f"server/worlds/{world_name}"
     # src_folder_name = "C:/Users/asst/Downloads/server/worlds/test"
     backup_folder_name = "minecraft-backups"
     zip_file_name = f"world_backup_{datetime.now().strftime('%Y%m%d')}"
