@@ -17,8 +17,10 @@ scripts to run a Bedrock Server and an automatic backup system for the world, on
 - get your client_secrets.json in the remote computer somehow lol (you can create the file there and manually input it, it's just one line), in the same folder as backup.py
 
 ## load a backup world into the server
-- inside the world's folder, change the name of the world in the file levelname.txt to `Bedrock level`
+- stop the server
+- inside the world's folder, change the name of the world in the file levelname.txt to `Bedrock level` if it isn't already
 - rename the world's folder name to `Bedrock level`
 - compress it to a file named `Bedrock level.zip`
 - upload it to the minecraft-backups drive folder
 - assuming you have the client_secrets.json (instructions in the last section), run load-backup.py
+- run the server again

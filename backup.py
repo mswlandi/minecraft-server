@@ -126,7 +126,7 @@ def upload_file(drive, folder_id, filename):
         print(f'file {filename} is empty')
 
 
-def delte_file(drive, folder_id, filename):
+def delete_file(drive, folder_id, filename):
     """ 
 		Deletes a specific file from Google Drive
 	"""
@@ -177,7 +177,7 @@ def main():
     if len(backups_filenames) > 5:
         backups_filenames.sort()
         file_to_delete = backups_filenames[0]
-        delte_file(drive, backup_folder_id, file_to_delete)
+        delete_file(drive, backup_folder_id, file_to_delete)
 
     # Upload the backup
     upload_file(drive, backup_folder_id, f'{zip_file_name}.zip')
