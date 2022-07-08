@@ -14,7 +14,7 @@ scripts to run a Bedrock Server and an automatic backup system for the world, on
 ## backup the world
 - in your own computer, complete the Authentication section in https://pythonhosted.org/PyDrive/quickstart.html to get the client_secrets.json
 - create a folder in your google drive called minecraft-backups
-- get your client_secrets.json in the remote computer somehow lol (you can create the file there and manually input it, it's just one line), in the same folder as backup.py
+- get your client_secrets.json and credentials.json in the remote computer somehow lol (you can create the files there and manually input it, it's just one line for both), in the same folder as backup.py
 
 ## load a backup world into the server
 - stop the server

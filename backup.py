@@ -16,7 +16,7 @@ from pydrive.files import GoogleDriveFileList
 import googleapiclient.errors
 
 # Import general libraries
-from os import chdir, listdir, stat
+from os import chdir, listdir, stat, remove
 from sys import exit
 import ast
 import shutil
@@ -181,6 +181,7 @@ def main():
 
     # Upload the backup
     upload_file(drive, backup_folder_id, f'{zip_file_name}.zip')
+    remove(f'{zip_file_name}.zip')
 
 
 if __name__ == "__main__":
