@@ -19,6 +19,7 @@ import googleapiclient.errors
 from sys import exit
 import ast
 import shutil
+import os
 
 
 def authenticate():
@@ -70,8 +71,8 @@ def download_file(drive, folder_id, filename):
 
 def main():
     world_name = "Bedrock level"
-    # dst_folder_name = f"~/server/worlds/{world_name}"
-    dst_folder_name = f"C:/Users/asst/Downloads/server/worlds/{world_name}"
+    dst_folder_name = f"~/server/worlds/{world_name}"
+    # dst_folder_name = f"C:/Users/asst/Downloads/server/worlds/{world_name}"
     backup_folder_name = "minecraft-backups"
 
     # Authenticate to Google API
@@ -84,7 +85,8 @@ def main():
         exit(1)
     
     download_file(drive, backup_folder_id, f"{world_name}.zip")
-    shutil.move( f"{world_name}.zip", dst_folder_name)
+    shutil.unpack_archive(f"{world_name}.zip", dst_folder_name)
+    os.remove(f"{world_name}.zip")
 
 
 if __name__ == "__main__":
