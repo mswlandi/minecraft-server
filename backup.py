@@ -146,9 +146,9 @@ def get_file_list(drive, folder_id):
 def main():
     world_name = "Bedrock level"
     src_folder_name = f"server/worlds/{world_name}"
-    # src_folder_name = "C:/Users/asst/Downloads/server/worlds/test"
+    # src_folder_name = "C:/Users/asst/Downloads/server/worlds"
     backup_folder_name = "minecraft-backups"
-    zip_file_name = f"world_backup_{datetime.now().strftime('%Y%m%d')}"
+    zip_file_name = f"world_backup_{datetime.now().strftime('%Y%m%d%H%M')}"
 
     # compresses the world to upload
     shutil.make_archive(zip_file_name, 'zip', src_folder_name)
